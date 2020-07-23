@@ -1,1 +1,5 @@
-<p>todo</p>
+<%= render :partial => "form" %>
+
+<% @tasks.each do |t| %>
+  <p><%= t.task %></p>
+<% end %>
