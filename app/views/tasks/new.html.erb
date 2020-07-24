@@ -1,0 +1,9 @@
+<h1>CREATE TODO</h1>
+
+<%= render 'error', object: @task %>
+
+<%= form_with(models: @task, url: tasks_path, local: true) do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+  <%= f.submit "作成", class: "btn" %>
+<% end %>

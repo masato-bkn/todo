@@ -1,0 +1,18 @@
+<h1>TODO</h1>
+
+<button class="btn">
+  <%=link_to "新規作成", new_task_path %>
+</button>
+
+<% @tasks.each do |t| %>
+  <p><%= t.task %>
+    <button class="btn">
+      <%=link_to "削除", task_path(t.id), method: :delete %>
+    </button>
+
+    <button class="btn">
+      <%=link_to "編集", edit_task_path(t) %>
+    </button>
+
+  </p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>編集</h1>
+
+<%= render 'error', object: @task %>
+
+<%= form_with(model: @task, local: true) do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+  <%= f.submit "更新", class: "btn" %>
+<% end %>
